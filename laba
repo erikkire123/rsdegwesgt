@@ -1155,13 +1155,13 @@ function library:AddWindow(title, options)
 						label.ZIndex = label.ZIndex + (windows * 10)
 
 						return label
-                        function label_data:UpdateLabel(newText)
-                            if label.Text ~= "  "..newText then
-                                label.Text = "  "..newText
-                            end
-                        end	
+                      
 					end
-                   
+                    function label_data:UpdateLabel(newText)
+                        if label.Text ~= "  "..newText then
+                            label.Text = "  "..newText
+                        end
+                    end	
 					function tab_data:AddButton(button_text, callback) -- [Button]
 						button_text = tostring(button_text or "New Button")
 						callback = typeof(callback) == "function" and callback or function()end
